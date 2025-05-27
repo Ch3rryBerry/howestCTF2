@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Howest CTF 2025</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../files/8502745766b2d5d066569fda0e5dda86/Opleidings-SYMBOOL_Howest-Cyber_Security_WIT_web.png" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="../themes/core-beta/static/assets/main.e9ec7884.css">
+  
+
+  
+
+  <script  src="../themes/core-beta/static/assets/color_mode_switcher.52334129.js"></script>
+
+  <script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "a2afc27ca94e7086661c92c7b1e0c5ca75388d9ebb30c882d3d5fefdceaeff38",
+          'userMode': "teams",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'teamId': null,
+          'teamName': null,
+          'start': null,
+          'end': null,
+          'themeSettings': {"challenge_category_order": "function compare(a, b) {\r\n  if (a \u003c b) {\r\n    return -1;\r\n  }\r\n  if (a \u003e b) {\r\n    return 1;\r\n  }\r\n  return 0;\r\n}", "challenge_order": "", "challenge_window_size": "lg", "use_builtin_code_highlighter": true},
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+
+  <style id="theme-color">
+:root {--theme-color: #000000;}
+.navbar{background-color: var(--theme-color) !important;}
+.jumbotron{background-color: var(--theme-color) !important;}
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="../index.html" class="navbar-brand">
+      
+        <img
+            class="img-responsive ctf_logo"
+            src="../files/474b423cf654182b65ee219a2a1a028a/Opleidings-SYMBOOL_Howest-Cyber_Security_WIT_web.png"
+            alt="Howest CTF 2025"
+            height="25"
+        >
+      
+    </a>
+
+    <button
+        class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars"
+        aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="../users.html">
+              Users
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../teams.html">
+                Teams
+              </a>
+            </li>
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="../scoreboard.html">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="../challenges.html">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../register.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Register">
+                  <i class="fas fa-user-plus d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-user-plus pe-1"></i>
+                  Register
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="../login.html">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-language d-none d-md-inline"></i>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-language pe-1"></i>
+              Change language
+            </span>
+          </button>
+          <form x-data="LanguageForm">
+            <ul class="dropdown-menu dropdown-menu-end">
+              
+              <li>
+                  <span class="dropdown-item " @click="set" value="en">
+                    English
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="de">
+                    Deutsch
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pl">
+                    Polski
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="es">
+                    Español
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ar">
+                    اَلْعَرَبِيَّةُ
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_CN">
+                    简体中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_TW">
+                    繁體中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fr">
+                    Français
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ko">
+                    한국어
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ru">
+                    русский язык
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pt_BR">
+                    Português do Brasil
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sk">
+                    Slovenský jazyk
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ja">
+                    日本語
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="it">
+                    Italiano
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="vi">
+                    tiếng Việt
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ca">
+                    Català
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="el">
+                    Ελληνικά
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fi">
+                    Suomi
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ro">
+                    Română
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sl">
+                    Slovenščina
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sv">
+                    Svenska
+                  </span>
+              </li>
+            </ul>
+          </form>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Toggle theme">
+              <i class="fas fa-sun d-none d-md-inline"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>CTF60</h1>
+
+      
+        <h2>
+          <a href="../teams/24.html">
+            <span class="badge bg-secondary">
+              CTF60
+            </span>
+          </a>
+        </h2>
+      
+
+      <div class="pt-2">
+        
+
+        
+
+        
+      </div>
+
+      
+
+      <div class="pt-2">
+        
+      </div>
+
+      
+
+      <div>
+        <h2 class="text-center">
+          
+            40th <small>place</small>
+          
+        </h2>
+        <h2 class="text-center">
+          
+            13950 <small>points</small>
+          
+        </h2>
+      </div>
+
+      <div class="pt-3">
+        
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+
+  
+</div>
+
+    
+    
+    
+
+      
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Awards</h3>
+          </div>
+          
+            <div class="col-md-3 col-sm-6">
+              <p class="text-center">
+                <i class="award-icon award- fa-2x"></i>
+                <br>
+                <strong>Hint 13</strong>
+              </p>
+              <p class="text-center">hints</p>
+              <p class="text-center">Hint for wav encoding</p>
+              <p class="text-center">0</p>
+            </div>
+          
+            <div class="col-md-3 col-sm-6">
+              <p class="text-center">
+                <i class="award-icon award- fa-2x"></i>
+                <br>
+                <strong>Hint 12</strong>
+              </p>
+              <p class="text-center">hints</p>
+              <p class="text-center">Hint for The Art of Web Programing</p>
+              <p class="text-center">0</p>
+            </div>
+          
+        </div>
+      
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Solves</h3>
+          <table class="table table-striped align-middle">
+            <thead>
+            <tr>
+              <th>Challenge</th>
+              <th class="d-none d-md-block d-lg-block">Category</th>
+              <th>Value</th>
+              <th>Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Lucas or Fibonacci?-123">
+                    Lucas or Fibonacci?
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Thomas &amp; the netcat gang</td>
+                <td>350</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-23T09:07:32.048292Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Hidden ansi-121">
+                    Hidden ansi
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Thomas &amp; the netcat gang</td>
+                <td>300</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-23T09:05:23.245150Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Poke-119">
+                    Poke
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Thomas &amp; the netcat gang</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-23T09:00:41.725771Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Retrospecting CTF-122">
+                    Retrospecting CTF
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>500</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-22T14:56:35.743739Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Reduce-113">
+                    Reduce
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exam Prep</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-22T14:36:09.397183Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Network Capture Flag 2-112">
+                    Network Capture Flag 2
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exam Prep</td>
+                <td>300</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-22T14:12:29.845814Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Network Capture Flag 1-111">
+                    Network Capture Flag 1
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exam Prep</td>
+                <td>150</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-22T14:12:17.951753Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Find 1-106">
+                    Find 1
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exam Prep</td>
+                <td>150</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-22T13:58:04.355893Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Static Sample 2-110">
+                    Static Sample 2
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exam Prep</td>
+                <td>150</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-22T13:32:29.823352Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Static Sample 1 - Flag 1-108">
+                    Static Sample 1 - Flag 1
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exam Prep</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-22T13:27:27.361570Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Web-105">
+                    Web
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exam Prep</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-22T13:25:34.506904Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Hell Divers: Bots-97">
+                    Hell Divers: Bots
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Scripting</td>
+                <td>400</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-21T16:46:50.335291Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Hell Divers: Bugs-96">
+                    Hell Divers: Bugs
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Scripting</td>
+                <td>300</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-21T15:36:47.999189Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Hell Divers: Squids-98">
+                    Hell Divers: Squids
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Scripting</td>
+                <td>500</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-21T14:52:49.949458Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Whoops-102">
+                    Whoops
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Scripting</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-21T14:41:57.253389Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Just another barcode-9">
+                    Just another barcode
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-21T09:23:08.378447Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#snake-95">
+                    snake
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">programming reverse engineering</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-21T09:08:28.586730Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#The Art of Web Programing-92">
+                    The Art of Web Programing
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Webserver security</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T18:17:54.664858Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#nginx is easy (step 2)-91">
+                    nginx is easy (step 2)
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Webserver security</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T16:48:14.515936Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#nginx is easy (step 1)-90">
+                    nginx is easy (step 1)
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Webserver security</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T16:47:43.318992Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#How hard is it to run a webserver?-89">
+                    How hard is it to run a webserver?
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Webserver security</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T12:58:26.435203Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#ASM math-84">
+                    ASM math
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>400</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T11:46:57.200123Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#delete me-80">
+                    delete me
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Scripting</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T11:29:57.340418Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Find x-83">
+                    Find x
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T11:26:44.118489Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#ASM 101-85">
+                    ASM 101
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T10:00:57.700334Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Suspicious Stranger 2-60">
+                    Suspicious Stranger 2
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">OSINT</td>
+                <td>300</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T09:59:56.209824Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#mickey-87">
+                    mickey
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Crypto</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-20T09:58:30.702609Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 5-32">
+                    Windows 10 Vm Challenge 5
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>250</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T21:42:47.237588Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Threads of fate-58">
+                    Threads of fate
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Scripting</td>
+                <td>500</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T21:28:32.872610Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 4-31">
+                    Windows 10 Vm Challenge 4
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T12:35:00.620514Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 16-47">
+                    Windows 10 Vm Challenge 16
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>300</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T12:30:27.537687Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 10-38">
+                    Windows 10 Vm Challenge 10
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>250</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T12:25:55.917246Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 8-35">
+                    Windows 10 Vm Challenge 8
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>350</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T12:12:19.876073Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 11-40">
+                    Windows 10 Vm Challenge 11
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>250</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T12:09:36.804395Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 3-29">
+                    Windows 10 Vm Challenge 3
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T12:01:46.255835Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 7-34">
+                    Windows 10 Vm Challenge 7
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>250</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T12:01:26.583804Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 15-46">
+                    Windows 10 Vm Challenge 15
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T11:59:45.852140Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 2-28">
+                    Windows 10 Vm Challenge 2
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T11:59:07.779529Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#AES-CTR-68">
+                    AES-CTR
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Crypto</td>
+                <td>300</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T11:24:26.219292Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Windows 10 Vm Challenge 1-27">
+                    Windows 10 Vm Challenge 1
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Windows forensics</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T10:26:04.595430Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Who&#39;s cooking?-55">
+                    Who&#39;s cooking?
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T10:15:00.980955Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Suspicious Stranger 1-59">
+                    Suspicious Stranger 1
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">OSINT</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T09:52:08.172351Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Playing with encodings-69">
+                    Playing with encodings
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Crypto</td>
+                <td>150</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T09:44:44.390926Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Catch me!-23">
+                    Catch me!
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Web</td>
+                <td>250</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T09:40:30.179297Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Zip it-43">
+                    Zip it
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>150</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T09:08:11.564337Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Zooooooom in-39">
+                    Zooooooom in
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>150</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:50:30.134269Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Trivia 6-67">
+                    Trivia 6
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Trivia</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:32:53.884015Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Trivia 5-66">
+                    Trivia 5
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Trivia</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:32:24.229974Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Trivia 4-65">
+                    Trivia 4
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Trivia</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:31:57.001090Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Trivia 3-64">
+                    Trivia 3
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Trivia</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:31:08.423640Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Trivia 2-63">
+                    Trivia 2
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Trivia</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:30:35.583849Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Trivia 1-62">
+                    Trivia 1
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Trivia</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:30:03.626269Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Number systems 2-22">
+                    Number systems 2
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Trivia</td>
+                <td>50</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:29:05.843263Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Number systems-21">
+                    Number systems
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Trivia</td>
+                <td>50</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:28:43.602310Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Flag in a haystack-26">
+                    Flag in a haystack
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:28:01.348734Z"></span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="../challenges.html#Run me! Read me!-24">
+                    Run me! Read me!
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Misc</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2025-05-19T08:23:44.306848Z"></span>
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="row" x-data="UserGraphs">
+        <div class="col-md-6 d-none d-md-block d-lg-block py-4">
+          <div class="progress">
+            <div 
+              class="progress-bar" 
+              role="progressbar" 
+              :style="{ width: `${getSolvePercentage()}%`, 'background-color': 'rgb(0, 209, 64)' }" 
+            >
+            </div>
+            <div 
+              class="progress-bar" 
+              role="progressbar" 
+              :style="{ width: `${getFailPercentage()}%`, 'background-color': 'rgb(207, 38, 0)' }"
+            >
+            </div>
+          </div>
+          <div class="ps-2 float-start">
+            <svg height="16" width="16">
+              <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
+            </svg>
+            <small x-text="`Solves (${getSolvePercentage()}%)`"></small>
+          </div>
+          <div class="ps-2 float-start">
+            <svg height="16" width="16">
+              <circle cx="8" cy="8" r="5" fill="rgb(207, 38, 0)" />
+            </svg>
+            <small x-text="`Fails (${getFailPercentage()}%)`"></small>
+          </div>
+        </div>
+        <div class="col-md-6 d-none d-md-block d-lg-block py-4">
+          <div class="progress">
+            <template x-for="category in getCategoryBreakdown()" :key="category.name">
+              <div 
+                class="progress-bar" 
+                role="progressbar" 
+                :style="{ width: `${category.percent}%`, 'background-color': category.color }"
+              >
+              </div>
+            </template>
+          </div>
+          <template x-for="category in getCategoryBreakdown()" :key="category.name">
+            <div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" />
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`"></small>
+            </div>
+          </template>
+        </div>
+
+        <br class="clearfix">
+
+        <div class="col-md-12 d-none d-md-block d-lg-block py-4">
+          <div id="score-graph" x-ref="scoregraph" class="w-100 d-flex align-items-center">
+            <div class="text-center w-100">
+              <i class="fas fa-circle-notch fa-spin fa-3x fa-fw spinner"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io" class="text-secondary">
+      <small class="text-muted">
+        Powered by CTFd
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data>
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data>
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+      window.USER = {"account_id": 164, "id": 164, "name": "CTF60", "type": "user"};
+  </script>
+
+  <script type="module"  src="../themes/core-beta/static/assets/index.8a9f494f.js"></script><script type="module"  src="../themes/core-beta/static/assets/userscore.dd9792d7.js"></script><script type="module"  src="../themes/core-beta/static/assets/index.1cf73b05.js"></script><script type="module"  src="../themes/core-beta/static/assets/echarts.128204f2.js"></script><script type="module"  src="../themes/core-beta/static/assets/users_public.38cb6e17.js"></script>
+
+
+
+
+
+</body>
+</html>

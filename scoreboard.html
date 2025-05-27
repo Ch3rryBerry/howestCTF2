@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Howest CTF 2025</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="files/8502745766b2d5d066569fda0e5dda86/Opleidings-SYMBOOL_Howest-Cyber_Security_WIT_web.png" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="themes/core-beta/static/assets/main.e9ec7884.css">
+  
+
+  
+
+  <script  src="themes/core-beta/static/assets/color_mode_switcher.52334129.js"></script>
+
+  <script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "a2afc27ca94e7086661c92c7b1e0c5ca75388d9ebb30c882d3d5fefdceaeff38",
+          'userMode': "teams",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'teamId': null,
+          'teamName': null,
+          'start': null,
+          'end': null,
+          'themeSettings': {"challenge_category_order": "function compare(a, b) {\r\n  if (a \u003c b) {\r\n    return -1;\r\n  }\r\n  if (a \u003e b) {\r\n    return 1;\r\n  }\r\n  return 0;\r\n}", "challenge_order": "", "challenge_window_size": "lg", "use_builtin_code_highlighter": true},
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+
+  <style id="theme-color">
+:root {--theme-color: #000000;}
+.navbar{background-color: var(--theme-color) !important;}
+.jumbotron{background-color: var(--theme-color) !important;}
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      
+        <img
+            class="img-responsive ctf_logo"
+            src="files/474b423cf654182b65ee219a2a1a028a/Opleidings-SYMBOOL_Howest-Cyber_Security_WIT_web.png"
+            alt="Howest CTF 2025"
+            height="25"
+        >
+      
+    </a>
+
+    <button
+        class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars"
+        aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="users.html">
+              Users
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="teams.html">
+                Teams
+              </a>
+            </li>
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="scoreboard.html">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="challenges.html">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Register">
+                  <i class="fas fa-user-plus d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-user-plus pe-1"></i>
+                  Register
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-language d-none d-md-inline"></i>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-language pe-1"></i>
+              Change language
+            </span>
+          </button>
+          <form x-data="LanguageForm">
+            <ul class="dropdown-menu dropdown-menu-end">
+              
+              <li>
+                  <span class="dropdown-item " @click="set" value="en">
+                    English
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="de">
+                    Deutsch
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pl">
+                    Polski
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="es">
+                    Español
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ar">
+                    اَلْعَرَبِيَّةُ
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_CN">
+                    简体中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_TW">
+                    繁體中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fr">
+                    Français
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ko">
+                    한국어
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ru">
+                    русский язык
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pt_BR">
+                    Português do Brasil
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sk">
+                    Slovenský jazyk
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ja">
+                    日本語
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="it">
+                    Italiano
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="vi">
+                    tiếng Việt
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ca">
+                    Català
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="el">
+                    Ελληνικά
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fi">
+                    Suomi
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ro">
+                    Română
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sl">
+                    Slovenščina
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sv">
+                    Svenska
+                  </span>
+              </li>
+            </ul>
+          </form>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Toggle theme">
+              <i class="fas fa-sun d-none d-md-inline"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Scoreboard
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+
+
+</div>
+
+<meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <style>
+        body {
+            background: #1e1e1e;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0rem;
+        }
+
+        #chart {
+            width: 100%;
+            height: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+
+    <script>
+        const chartDom = document.getElementById('chart');
+        const myChart = echarts.init(chartDom, null, { renderer: 'canvas' });
+
+        const timeLabels = [
+            '2024-05-19 12:00',
+            '2024-05-20 12:00',
+            '2024-05-21 12:00',
+            '2024-05-22 12:00',
+            '2024-05-23 12:00'
+        ];
+
+        const teams = [
+            { name: "Linganguliguliguli CTF 9", data: [0, 12000, 15000, 22500, 30150] },
+            { name: "CTF-6", data: [0, 7000, 14000, 22000, 29650] },
+            { name: "CTF-25", data: [0, 6000, 13000, 21000, 29650] },
+            { name: "CTF 31", data: [0, 6500, 12500, 19000, 29650] },
+            { name: "CTF 1 cybersec", data: [0, 5500, 11000, 18000, 29650] },
+            { name: "w8 ze zien je nie gerre hoe dak je gerre zien w8 CTF8", data: [0, 5000, 10000, 15000, 29150] },
+            { name: "CTF12 Zakhoofden", data: [0, 4000, 9000, 14000, 28850] },
+            { name: "CTF_one8y", data: [0, 3000, 8000, 13000, 28050] },
+            { name: "CTF 34 - HACKTUAH", data: [0, 2000, 7000, 12000, 27980] },
+            { name: "CTF-19-Burger", data: [0, 1000, 6000, 11000, 27950] }
+        ];
+
+        const option = {
+            backgroundColor: '#1e1e1e',
+            title: {
+                text: 'Top 10 Teams - Score Evolution',
+                left: 'center',
+                top: 10,
+                textStyle: { color: '#ccc' }
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                bottom: 0,
+                textStyle: { color: '#ccc' },
+                type: 'scroll'
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: timeLabels,
+                axisLine: { lineStyle: { color: '#ccc' } }
+            },
+            yAxis: {
+                type: 'value',
+                axisLine: { lineStyle: { color: '#ccc' } },
+                splitLine: { lineStyle: { color: '#333' } }
+            },
+            series: teams.map(team => ({
+                name: team.name,
+                type: 'line',
+                data: team.data,
+                smooth: true,
+                symbol: 'circle',
+                symbolSize: 6,
+                lineStyle: { width: 2 }
+            }))
+        };
+
+        myChart.setOption(option);
+    </script>
+</body>
+
+    <div id="scoreboard" class="row" x-data="ScoreboardList">
+      <template x-if="brackets.length &amp;&amp; standings.length"></template>
+
+      <div class="col-md-12" x-show="standings.length">
+        <table class="table table-striped align-middle">
+          <thead>
+          <tr>
+            <th style="width: 10px">Place</th>
+            <th class="text-start ps-3">Team</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <template x-for="(standing, index) in standings.filter(i =&gt; activeBracket ? i.bracket_id==activeBracket : true)"></template><tr>
+                <th scope="row" class="text-center" x-text="index + 1">1</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/8.html">Linganguliguliguli CTF 9</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">30150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">2</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/15.html">CTF-6</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">29650</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">3</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/11.html">CTF-25</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">29650</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">4</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/37.html">CTF 31</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">29650</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">5</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/7.html">CTF 1 cybersec</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">29650</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">6</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/12.html">w8 ze zien je nie gerre hoe dak je gerre zien w8 CTF8</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">29150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">7</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/10.html">CTF12 Zakhoofden</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">28850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">8</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/17.html">CTF_one8y</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">28050</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">9</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/29.html">CTF 34 - HACKTUAH</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">27980</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">10</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/9.html">CTF-19-Burger</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">27950</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">11</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/16.html">Los Hermanos Atrapa La Bandera (32)</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">27900</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">12</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/18.html">CTF5-NAWAK</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">27850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">13</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/32.html">CTF17 - CacheMeOutside</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">27750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">14</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/21.html">LOS_POLLOS_HERMANOS_CTF2</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26280</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">15</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/22.html">CTF 39</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">16</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/43.html">CTF 30</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25900</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">17</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/51.html">CTF-43</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25515</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">18</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/25.html">Sudoers CTF-24</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25280</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">19</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/44.html">OOO-Howest-CTF-40</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">24800</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">20</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/19.html">CTF_28</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">24040</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">21</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/52.html">Losers called CTF 4</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">23585</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">22</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/46.html">CTF 13</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">23330</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">23</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/34.html">CTF11</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">23230</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">24</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/42.html">CTF21 scuffed shit</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">23050</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">25</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/33.html">CTF 26 :)</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">21850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">26</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/27.html">CTF36: Too Many Flags, Not Enough Time</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">21715</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">27</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/50.html">CTF-27</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">20890</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">28</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/38.html">CTF23_ERIS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">20790</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">29</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/13.html">CTF 7</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">20500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">30</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/26.html">CTF-29</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">19480</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">31</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/23.html">CTF 20/20</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">19200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">32</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/28.html">CTF-47</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">18840</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">33</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/20.html">CTF 48</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">18480</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">34</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/41.html">Capture The Flag like Mario Team 16</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">18335</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">35</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/40.html">BLACKice91-CTF49</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">17630</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">36</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/14.html">CTF 46</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">15745</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">37</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/47.html">CTF 33</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">15495</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">38</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/45.html">CTF37</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">15475</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">39</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/36.html">GROUP 35</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">15445</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">40</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/24.html">CTF60</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">13950</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">41</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/30.html">CTF 44</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">13390</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">42</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/53.html">group_10</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">11500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">43</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/35.html">CTF15</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">9195</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">44</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/56.html">CTF-22 team</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">8300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">45</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/39.html">CHAMPINZINNI BANINI41</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">8200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">46</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/31.html">CTF 14</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">6295</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">47</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/48.html">CTF 61 -- CHACHO and AFRO</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">5250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">48</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/55.html">The Johns</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2645</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">49</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="teams/49.html">koenk</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">350</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">
+        Powered by CTFd
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="./Howest CTF 2025sc_files/index.8a9f494f.js.download"></script><script type="module" src="./Howest CTF 2025sc_files/index.1cf73b05.js.download"></script><script type="module" src="./Howest CTF 2025sc_files/echarts.128204f2.js.download"></script><script type="module" src="./Howest CTF 2025sc_files/scoreboard.899daf28.js.download"></script>
+
+
+
+
+
+
+</body></html>
